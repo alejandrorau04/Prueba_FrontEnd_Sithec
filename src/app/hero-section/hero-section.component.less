@@ -1,0 +1,185 @@
+/* Menú cerrado */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  top: 60px; /* altura de tu header */
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* Menú abierto */
+.nav-menu.open {
+  display: flex;
+  max-height: 500px; /* suficiente para contener links */
+  opacity: 1;
+}
+
+/* Estilos para desktop */
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    max-height: none;
+    opacity: 1;
+    box-shadow: none;
+  }
+}
+
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: white; 
+
+  .hero-title {
+    font-family: 'DM Serif Display', serif;
+    word-break: break-word;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #555;
+    margin-top: 1rem;
+    max-width: 600px;
+  }
+
+  .hero-image-container {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 2rem;
+    .hero-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .trusted-by {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    text-align: left;
+    
+    .trusted-by-text {
+      font-weight: 600;
+      color: #777;
+    }
+    
+    .logo-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2em;
+      margin-top: 1em;
+      
+      .trusted-logo {
+        height:100px;
+        opacity: 0.7;
+        filter: grayscale(100%);
+        transition: opacity 0.3s, filter 0.3s;
+        
+        &:hover {
+          opacity: 1;
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mobile-image {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+.hero-image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.desktop-image,
+.mobile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  opacity: 0;
+}
+
+.desktop-image {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .desktop-image {
+    opacity: 0;
+    z-index: 0;
+  }
+
+  .mobile-image {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+  }
+}
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .trusted-by {
+      text-align: center;
+      .logo-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        
+        .trusted-logo {
+          height: 30px;
+        }
+      }
+    }
+  }
+}

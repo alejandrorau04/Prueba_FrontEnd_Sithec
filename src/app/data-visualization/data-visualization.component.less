@@ -1,0 +1,119 @@
+.map-your-success-section {
+  padding: 4rem 2rem;
+  background-color: white;
+  text-align: center;
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+
+    .main-title {
+      font-family: 'Crimson Text:Regular', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .discover-button {
+      background-color: #d9f2c2;
+      color: #3e6128;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #c7e0b2;
+      }
+    }
+  }
+
+  .steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+
+    .step-card {
+      text-align: left;
+      .step-number {
+        font-family: 'Crimson Text:Regular', sans-serif;
+        font-size: 3rem;
+        color: #ddd;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+      }
+      p {
+        font-size: 1rem;
+        color: #666;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  .image-full-width {
+       width: 100%; 
+    display: flex;  
+    justify-content: center; 
+
+    img {
+      width: 1200px;  
+      height: 500px;
+      display: block;
+      border-radius: 16px;
+    }
+  }
+
+  /* Tablet (up to 992px) */
+  @media (max-width: 992px) {
+    padding: 3rem 1.5rem;
+    
+    .header-content {
+      flex-direction: column;
+      text-align: center;
+      .main-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      .discover-button {
+        margin-top: 1rem;
+      }
+    }
+    
+    .steps-container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .image-full-width img {
+      height: auto; /* Remove fixed height for better scaling */
+    }
+  }
+  
+  /* Mobile (up to 576px) */
+  @media (max-width: 576px) {
+    padding: 2rem 1rem;
+    
+    .header-content {
+      .main-title {
+        font-size: 2rem;
+      }
+    }
+    
+    .steps-container {
+      grid-template-columns: 1fr; /* Stack the cards vertically */
+    }
+  }
+}

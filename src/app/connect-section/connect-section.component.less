@@ -1,0 +1,62 @@
+.connect-section {
+  padding: 4rem 2rem;
+  background-color: white;
+  text-align: center;
+  
+  .content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-family: 'Crimson Text:Regular', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: .80rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .learn-more-button {
+    background-color: #3e6128;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+      background-color: #2b431c;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 3rem 1.5rem;
+    
+    .section-title {
+      font-size: 2.5rem;
+    }
+    .section-subtitle {
+      font-size: 0.9rem; // Adjusted for better tablet readability
+    }
+  }
+
+  /* Mobile (up to 576px) */
+  @media (max-width: 576px) {
+    padding: 2rem 1rem;
+    
+    .section-title {
+      font-size: 2rem;
+    }
+    .section-subtitle {
+      font-size: 0.8rem;
+    }
+  }
+}

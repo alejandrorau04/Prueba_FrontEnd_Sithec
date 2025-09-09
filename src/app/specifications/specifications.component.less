@@ -1,0 +1,66 @@
+.specifications-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: white;
+
+  .specifications-intro {
+    margin-bottom: 4rem;
+    .small-text {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ff6c00;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .main-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+    }
+    .subtitle {
+      font-size: 1.25rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .specs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .spec-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #f7f9fc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    .icon {
+      margin-bottom: 1rem;
+      svg {
+        width: 32px;
+        height: 32px;
+        stroke: #aaa;
+        transition: stroke 0.3s ease;
+      }
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      color: #666;
+    }
+
+    &:hover .icon svg {
+      stroke: #ff6c00;
+    }
+  }
+}

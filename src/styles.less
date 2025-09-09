@@ -1,1 +1,108 @@
-/* You can add global styles to this file, and also import other style files */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; // Los logos se envuelven a la siguiente línea si no caben
+  padding: 2rem 0;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Media Query para Tabletas (hasta 992px) */
+@media (max-width: 992px) {
+  .logo-container {
+    gap: 1rem; // Reduce el espacio entre logos para que quepan mejor
+    padding: 1rem 1.5rem; // Ajusta el padding para tabletas
+  }
+}
+
+/* Media Query para Móviles (hasta 768px) */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column; // Apila los logos en una columna
+    gap: 0.5rem;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+// Asegura que todas las imágenes y logos sean responsivos.
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Estilos específicos para la sección de logos
+.trusted-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; // Permite que los logos se muevan a una nueva fila si no caben
+  padding: 2rem 0;
+}
+
+// Media Query para Tabletas (ancho máximo de 992px)
+@media (max-width: 992px) {
+  .trusted-by {
+    gap: 1rem; // Reduce el espacio entre logos para que quepan mejor
+    padding: 1rem 1.5rem; // Ajusta el padding para la tableta
+  }
+}
+
+// Media Query para Móviles (ancho máximo de 768px)
+@media (max-width: 768px) {
+  .trusted-by {
+    flex-direction: column; // Si lo deseas, puedes apilarlos en móviles
+    gap: 0.5rem;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+// These rules ensure all images, videos, and objects scale down.
+img,
+video,
+iframe,
+object {
+  max-width: 100%;
+  height: auto;
+  display: block; // This removes extra space below images
+}
+
+// This rule ensures all your main content sections are contained.
+.container,
+.section-container {
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed for your design */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@import 'styles.less'; // Add this line to the top
+
+// Your existing header styles can go below here.
+.main-header {
+  // ... (tus estilos del encabezado) ...
+}
+
+// ... etc. ...
+
+@import (css) url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #F8F9FA;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-family: 'DM Serif Display', serif;
+}
