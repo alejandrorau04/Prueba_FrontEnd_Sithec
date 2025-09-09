@@ -43,7 +43,7 @@ Clona el repositorio desde GitHub:
 
 Bash
 
-git clone https://github.com/alejandrorau04/Prueba_FrontEnd_Sithec.git
+git clone -b master https://github.com/alejandrorau04/Prueba_FrontEnd_Sithec.git
 Navega al directorio del proyecto:
 
 Bash
